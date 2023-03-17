@@ -13,14 +13,14 @@ import lombok.NoArgsConstructor;
 public class Product {
 
     @Id
-    @GeneratedValue
-    @Column(name = "product_id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false)
     private int id;
 
-    @Column(name = "product_name")
+    @Column(name = "product_name", nullable = false, length = 255)
     private String productName;
 
-    @Column(name = "price")
+    @Column(name = "price", nullable = false)
     private double price;
 
     // test main commit
